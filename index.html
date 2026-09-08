@@ -1,0 +1,396 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Inezziaaa 💌</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3, #7b61ff);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 650px;
+      text-align: center;
+      padding: 25px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 30px;
+      padding: 35px 25px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      animation: appear 1s ease;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .flag {
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      margin: 20px 0;
+      font-size: 27px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 15px 0;
+    }
+
+    .names {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .button {
+      border: none;
+      padding: 15px 28px;
+      border-radius: 50px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 15px;
+      background: white;
+      color: #ff4f81;
+      transition: 0.3s;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .button:hover {
+      transform: scale(1.07);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .message {
+      margin-top: 25px;
+      padding: 20px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+    }
+
+    .choices {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .choice {
+      border: none;
+      padding: 12px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      background: rgba(255,255,255,0.9);
+      color: #333;
+      transition: 0.3s;
+    }
+
+    .choice:hover {
+      transform: scale(1.05);
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 15px;
+      opacity: 0.85;
+    }
+
+    .heart {
+      position: fixed;
+      font-size: 22px;
+      animation: float 4s linear forwards;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .success {
+      font-size: 25px;
+      font-weight: bold;
+      margin-top: 20px;
+      animation: pop 0.6s ease;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.5); }
+      70% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- FIRST SCREEN -->
+    <div class="card" id="welcome">
+
+      <div class="flag">🇮🇳 🤝 🇵🇱</div>
+
+      <h1>For Inezziaaa 💌</h1>
+
+      <div class="names">
+        Vikas × Inezziaaa
+      </div>
+
+      <p>
+        A little website from India 🇮🇳<br>
+        for my special best friend in Poland 🇵🇱
+      </p>
+
+      <button class="button" onclick="openMessage()">
+        Open it 💌
+      </button>
+
+      <div class="footer">
+        Made with friendship & a little bit of panic 😭😂
+      </div>
+
+    </div>
+
+
+    <!-- MAIN MESSAGE -->
+    <div class="card hidden" id="main">
+
+      <div class="flag">🥺💗</div>
+
+      <h1>Hey Inezziaaa...</h1>
+
+      <p>
+        I know you're angry with me.
+      </p>
+
+      <p>
+        And honestly, I don't want to make excuses.
+        If I hurt you or made you upset,
+        <b>I'm genuinely sorry.</b> ❤️
+      </p>
+
+      <div class="message">
+
+        <h2>One thing from Vikas 🤝</h2>
+
+        <p>
+          I really value our friendship.
+          Even though we're in different countries,
+          India 🇮🇳 and Poland 🇵🇱,
+          you're still someone I don't want to lose as a friend.
+        </p>
+
+        <p>
+          I'm not asking you to forget everything instantly.
+          Take your time.
+        </p>
+
+        <p>
+          I just wanted you to know that
+          <b>I'm sorry, Inezziaaa.</b> 🥺
+        </p>
+
+      </div>
+
+      <h2>So... what do you say? 😭</h2>
+
+      <div class="choices">
+
+        <button class="choice" onclick="angry()">
+          😤 Still angry
+        </button>
+
+        <button class="choice" onclick="maybe()">
+          🤔 Maybe...
+        </button>
+
+        <button class="choice" onclick="forgive()">
+          😊 Okay, forgiven
+        </button>
+
+      </div>
+
+      <div id="response"></div>
+
+      <div class="footer">
+        — From Vikas 🇮🇳 to Inezziaaa 🇵🇱
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    function openMessage() {
+      document.getElementById("welcome").classList.add("hidden");
+      document.getElementById("main").classList.remove("hidden");
+
+      createHearts();
+    }
+
+
+    function angry() {
+      document.getElementById("response").innerHTML = `
+        <div class="message">
+          <div class="success">Okay okay 😭😂</div>
+          <p>
+            I'll accept my punishment... 😔<br>
+            But whenever you're ready, I'm here. 🤝
+          </p>
+        </div>
+      `;
+
+      createHearts();
+    }
+
+
+    function maybe() {
+      document.getElementById("response").innerHTML = `
+        <div class="message">
+          <div class="success">I'll take that "maybe" 😭😂</div>
+          <p>
+            That's at least a tiny step! 🥹<br>
+            No pressure. Take your time. 🤝
+          </p>
+        </div>
+      `;
+
+      createHearts();
+    }
+
+
+    function forgive() {
+      document.getElementById("response").innerHTML = `
+        <div class="message">
+          <div class="success">YEEEEES! 🎉😭❤️</div>
+          <p>
+            Thank you, Inezziaaa! 🥹
+          </p>
+          <p>
+            Friendship restored! 🤝✨
+          </p>
+          <p>
+            — Vikas 🇮🇳
+          </p>
+        </div>
+      `;
+
+      createLotsOfHearts();
+    }
+
+
+    function createHearts() {
+
+      for (let i = 0; i < 12; i++) {
+
+        setTimeout(() => {
+
+          const heart = document.createElement("div");
+
+          heart.className = "heart";
+          heart.innerHTML = Math.random() > 0.5 ? "❤️" : "✨";
+
+          heart.style.left = Math.random() * 100 + "vw";
+
+          heart.style.animationDuration =
+            (3 + Math.random() * 2) + "s";
+
+          document.body.appendChild(heart);
+
+          setTimeout(() => {
+            heart.remove();
+          }, 5000);
+
+        }, i * 150);
+
+      }
+
+    }
+
+
+    function createLotsOfHearts() {
+
+      for (let i = 0; i < 40; i++) {
+
+        setTimeout(() => {
+
+          const heart = document.createElement("div");
+
+          heart.className = "heart";
+          heart.innerHTML =
+            ["❤️","💖","✨","🤝","🇵🇱","🇮🇳"]
+            [Math.floor(Math.random() * 6)];
+
+          heart.style.left = Math.random() * 100 + "vw";
+
+          heart.style.animationDuration =
+            (2 + Math.random() * 3) + "s";
+
+          document.body.appendChild(heart);
+
+          setTimeout(() => {
+            heart.remove();
+          }, 5000);
+
+        }, i * 80);
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
+```
